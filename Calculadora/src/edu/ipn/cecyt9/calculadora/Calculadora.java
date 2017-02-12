@@ -83,14 +83,19 @@ public class Calculadora extends JFrame {
 		panel.add("Center", panelNumeros);
 
 		panelOperaciones = new JPanel();
-		panelOperaciones.setLayout(new GridLayout(6, 1));
+		panelOperaciones.setLayout(new GridLayout(11, 1));
 		panelOperaciones.setBorder(new EmptyBorder(4, 4, 4, 4));
 
 		nuevoBotonOperacion("+");
 		nuevoBotonOperacion("-");
 		nuevoBotonOperacion("*");
 		nuevoBotonOperacion("/");
-		nuevoBotonOperacion("=");
+                nuevoBotonOperacion("Raiz");
+                nuevoBotonOperacion("Cotangente");
+                nuevoBotonOperacion("SEN");
+                nuevoBotonOperacion("COS");
+                nuevoBotonOperacion("TAN");
+                nuevoBotonOperacion("=");
 		nuevoBotonOperacion("CE");
 
 		panel.add("East", panelOperaciones);
@@ -162,37 +167,202 @@ public class Calculadora extends JFrame {
 	 * @param tecla
 	 */
 	private void operacionPulsado(String tecla) {
-		if (tecla.equals("=")) {
-			calcularResultado();
-		} else if (tecla.equals("CE")) {
-			resultado = 0;
-			pantalla.setText("");
-			nuevaOperacion = true;
-		} else {
-			operacion = tecla;
-			if ((resultado > 0) && !nuevaOperacion) {
-				calcularResultado();
-			} else {
-				resultado = new Double(pantalla.getText());
-			}
-		}
+            
+            
+            switch (tecla) {
+                case "=":
+                    calcularResultado();
+                    break;
+                case "CE":
+                    resultado = 0;
+                    pantalla.setText("");
+                    nuevaOperacion = true;
+                    break;
+                case "Raiz":
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(0).setEnabled(false);
+                        panelOperaciones.getComponent(1).setEnabled(false);
+                        panelOperaciones.getComponent(2).setEnabled(false);
+                        panelOperaciones.getComponent(3).setEnabled(false);
+                        panelOperaciones.getComponent(4).setEnabled(false);
+                        panelOperaciones.getComponent(5).setEnabled(false);
+                        panelOperaciones.getComponent(6).setEnabled(false);
+                        panelOperaciones.getComponent(7).setEnabled(false);
+                        panelOperaciones.getComponent(8).setEnabled(false);
+                        panelOperaciones.getComponent(10).setEnabled(false);
+                        
+                        
+                    }
+                    operacion = tecla;
+                    if ((resultado > 0) && !nuevaOperacion) {
+                        calcularResultado();
+                    } else {
+                        resultado = new Double(pantalla.getText());
+                    }
+                    break;
+                    case "Cotangente":
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(0).setEnabled(false);
+                        panelOperaciones.getComponent(1).setEnabled(false);
+                        panelOperaciones.getComponent(2).setEnabled(false);
+                        panelOperaciones.getComponent(3).setEnabled(false);
+                        panelOperaciones.getComponent(4).setEnabled(false);
+                        panelOperaciones.getComponent(5).setEnabled(false);
+                        panelOperaciones.getComponent(6).setEnabled(false);
+                        panelOperaciones.getComponent(7).setEnabled(false);
+                        panelOperaciones.getComponent(8).setEnabled(false);
+                        panelOperaciones.getComponent(10).setEnabled(false);
+                        
+                        
+                    }
+                    operacion = tecla;
+                    if ((resultado > 0) && !nuevaOperacion) {
+                        calcularResultado();
+                    } else {
+                        resultado = new Double(pantalla.getText());
+                    }
+                    break;
+                    case "SEN":
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(0).setEnabled(false);
+                        panelOperaciones.getComponent(1).setEnabled(false);
+                        panelOperaciones.getComponent(2).setEnabled(false);
+                        panelOperaciones.getComponent(3).setEnabled(false);
+                        panelOperaciones.getComponent(4).setEnabled(false);
+                        panelOperaciones.getComponent(5).setEnabled(false);
+                        panelOperaciones.getComponent(6).setEnabled(false);
+                        panelOperaciones.getComponent(7).setEnabled(false);
+                        panelOperaciones.getComponent(8).setEnabled(false);
+                        panelOperaciones.getComponent(10).setEnabled(false);
+                        
+                        
+                    }
+                    operacion = tecla;
+                    if ((resultado > 0) && !nuevaOperacion) {
+                        calcularResultado();
+                    } else {
+                        resultado = new Double(pantalla.getText());
+                    }
+                    break;
+                    case "COS":
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(0).setEnabled(false);
+                        panelOperaciones.getComponent(1).setEnabled(false);
+                        panelOperaciones.getComponent(2).setEnabled(false);
+                        panelOperaciones.getComponent(3).setEnabled(false);
+                        panelOperaciones.getComponent(4).setEnabled(false);
+                        panelOperaciones.getComponent(5).setEnabled(false);
+                        panelOperaciones.getComponent(6).setEnabled(false);
+                        panelOperaciones.getComponent(7).setEnabled(false);
+                        panelOperaciones.getComponent(8).setEnabled(false);
+                        panelOperaciones.getComponent(10).setEnabled(false);
+                        
+                        
+                    }
+                    operacion = tecla;
+                    if ((resultado > 0) && !nuevaOperacion) {
+                        calcularResultado();
+                    } else {
+                        resultado = new Double(pantalla.getText());
+                    }
+                    break;
+                    case "TAN":
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(0).setEnabled(false);
+                        panelOperaciones.getComponent(1).setEnabled(false);
+                        panelOperaciones.getComponent(2).setEnabled(false);
+                        panelOperaciones.getComponent(3).setEnabled(false);
+                        panelOperaciones.getComponent(4).setEnabled(false);
+                        panelOperaciones.getComponent(5).setEnabled(false);
+                        panelOperaciones.getComponent(6).setEnabled(false);
+                        panelOperaciones.getComponent(7).setEnabled(false);
+                        panelOperaciones.getComponent(8).setEnabled(false);
+                        panelOperaciones.getComponent(10).setEnabled(false);
+                        
+                        
+                    }
+                    operacion = tecla;
+                    if ((resultado > 0) && !nuevaOperacion) {
+                        calcularResultado();
+                    } else {
+                        resultado = new Double(pantalla.getText());
+                    }
+                    break;
+                default:
+                    operacion = tecla;
+                    if ((resultado > 0) && !nuevaOperacion) {
+                        calcularResultado();
+                    } else {
+                        resultado = new Double(pantalla.getText());
+                    }
+                    break;
+            }
 
 		nuevaOperacion = true;
 	}
-
 	/**
 	 * Calcula el resultado y lo muestra por pantalla
 	 */
 	private void calcularResultado() {
-		if (operacion.equals("+")) {
-			resultado += new Double(pantalla.getText());
-		} else if (operacion.equals("-")) {
-			resultado -= new Double(pantalla.getText());
-		} else if (operacion.equals("/")) {
-			resultado /= new Double(pantalla.getText());
-		} else if (operacion.equals("*")) {
-			resultado *= new Double(pantalla.getText());
-		}
+            
+            switch (operacion) {
+                case "+":
+                    resultado += new Double(pantalla.getText());
+                    break;
+                case "-":
+                    resultado -= new Double(pantalla.getText());
+                    break;
+                case "/":
+                    resultado /= new Double(pantalla.getText());
+                    break;
+                case "*":
+                    resultado *= new Double(pantalla.getText());
+                    break;
+                case "Raiz":
+                    resultado = Math.sqrt(resultado);
+                    new Double(pantalla.getText());
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(i).setEnabled(true);
+                     
+                    }                    
+                    
+                    break;
+                case "Cotangente":
+                    resultado = 1/Math.tan(Math.toRadians(resultado));
+                    new Double(pantalla.getText());
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(i).setEnabled(true);
+                     
+                    } 
+                    
+                    break;
+                case "SEN":
+                    resultado = Math.sin(Math.toRadians(resultado));
+                    new Double(pantalla.getText());
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(i).setEnabled(true);
+                     
+                    } 
+                    break;
+                case "COS":
+                    resultado = Math.cos(Math.toRadians(resultado));
+                    new Double(pantalla.getText());
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(i).setEnabled(true);
+                     
+                    } 
+                    break;
+                case "TAN":
+                    resultado = Math.tan(Math.toRadians(resultado));
+                    new Double(pantalla.getText());
+                    for(int i=0;i<panelOperaciones.getComponents().length;i++) {
+                        panelOperaciones.getComponent(i).setEnabled(true);
+                     
+                    } 
+                    break;
+                default:
+                    break;
+            }
 
 		pantalla.setText("" + resultado);
 		operacion = "";
